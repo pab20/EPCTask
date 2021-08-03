@@ -19,10 +19,11 @@ class EpcController extends Controller
 
         $address = 'liverpool';
         $postcode = 'W37PQ';
+        //Dummy Authorization for security
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
-            'Authorization' => 'Basic cGF0cmlja2FudHdpYkBnbWFpbC5jb206NmQ1NWRhY2FjZDIzMmRjYjI5NDMwNzYxZTI1ZjBkM2ZjNDNlMTc1MA==',
+            'Authorization' => 'Basic xXXXXxxxxxxXXXXXXXXxxxxxxxXXXXXXXXXXXxXXXXxxxxxxXXXXXXXXxxxxxxxXXXXXXXXXXX==',
         ])->get('https://epc.opendatacommunities.org/api/v1/display/search?adrress='.$address);
 
         //https://epc.opendatacommunities.org/docs/api/display#using_this_api
